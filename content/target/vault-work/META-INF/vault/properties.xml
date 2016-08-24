@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>emailworkflow Package</comment>
+<entry key="createdBy">aaysriva</entry>
+<entry key="name">emailworkflow-content</entry>
+<entry key="created">2016-08-24T18:57:23.412+0530</entry>
+<entry key="groupId">com.day.jcr.vault</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.aem.workflowstep</entry>
+<entry key="description">Maven Multimodule project for emailworkflow.</entry>
+<entry key="artifactId">emailworkflow-content</entry>
+<entry key="path">/etc/packages/com.aem.workflowstep/emailworkflow-content.zip</entry>
+</properties>

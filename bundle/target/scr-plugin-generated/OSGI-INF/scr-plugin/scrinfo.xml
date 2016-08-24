@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="com.day.jcr.vault.emailworkflow.impl.CustomStep">
+        <implementation class="com.day.jcr.vault.emailworkflow.impl.CustomStep"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.granite.workflow.exec.WorkflowProcess"/>
+        </service>
+        <property name="service.description" type="String" value="Test Email workflow process implementation." private="false"/>
+        <property name="service.vendor" type="String" value="Adobe" private="false"/>
+        <property name="process.label" type="String" value="Test Email Workflow Process" private="false"/>
+        <property name="service.pid" value="com.day.jcr.vault.emailworkflow.impl.CustomStep" private="false"/>
+        <reference name="messageGatewayService" interface="com.day.cq.mailer.MessageGatewayService" cardinality="1..1" policy="static" bind="bindMessageGatewayService" unbind="unbindMessageGatewayService" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.day.jcr.vault.emailworkflow.impl.HelloServiceImpl">
+        <implementation class="com.day.jcr.vault.emailworkflow.impl.HelloServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.day.jcr.vault.emailworkflow.HelloService"/>
+        </service>
+        <property name="service.pid" value="com.day.jcr.vault.emailworkflow.impl.HelloServiceImpl" private="false"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.day.jcr.vault.emailworkflow.impl.filters.LoggingFilter">
+        <implementation class="com.day.jcr.vault.emailworkflow.impl.filters.LoggingFilter"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Filter"/>
+        </service>
+        <property name="service.ranking" type="Integer" value="-700" private="false"/>
+        <property name="sling.filter.scope" value="REQUEST" private="false"/>
+        <property name="service.pid" value="com.day.jcr.vault.emailworkflow.impl.filters.LoggingFilter" private="false"/>
+    </scr:component>
+</components>

@@ -1,0 +1,5 @@
+com\day\jcr\vault\emailworkflow\impl\CustomStep.class
+com\day\jcr\vault\emailworkflow\package-info.class
+com\day\jcr\vault\emailworkflow\HelloService.class
+com\day\jcr\vault\emailworkflow\impl\filters\LoggingFilter.class
+com\day\jcr\vault\emailworkflow\impl\HelloServiceImpl.class
